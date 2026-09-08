@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080b0d;
+    color: #f1f1f1;
+}
+
+/* NAVBAR */
+
+.navbar {
+    height: 70px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0d1114;
+    border-bottom: 1px solid #252b2f;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e63946;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #e63946;
+}
+
+/* HERO */
+
+.hero {
+    min-height: calc(100vh - 70px);
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 80% 50%, #301418 0%, transparent 35%),
+        #080b0d;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.warning {
+    color: #e63946;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: 0.9;
+    letter-spacing: 5px;
+}
+
+h1 span {
+    color: #e63946;
+}
+
+.description {
+    max-width: 500px;
+    margin: 30px 0;
+    color: #9da4a8;
+    line-height: 1.7;
+}
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 14px 28px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.start-btn {
+    background: #e63946;
+    color: white;
+}
+
+.start-btn:hover {
+    background: #ff4d5a;
+}
+
+.how-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid #555;
+}
+
+.how-btn:hover {
+    border-color: #e63946;
+}
+
+/* STATUS */
+
+.game-status {
+    display: flex;
+    gap: 60px;
+    margin-top: 80px;
+}
+
+.game-status div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.game-status span {
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.game-status strong {
+    font-size: 22px;
+}
+
+/* SECTIONS */
+
+.info-section,
+.weapons-section {
+    padding: 100px 8%;
+    background: #0d1114;
+    border-top: 1px solid #202529;
+}
+
+h2 {
+    font-size: 35px;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 30px;
+    background: #14191d;
+    border: 1px solid #292f33;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #e63946;
+}
+
+.card h3 {
+    color: #e63946;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card p,
+.weapons-section p {
+    color: #8d9599;
+    line-height: 1.6;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 70px 6%;
+    }
+
+    .game-status {
+        gap: 25px;
+        margin-top: 60px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 200px;
+    }
+}
