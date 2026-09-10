@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>>Document</title>
     <title>Zombie: Last Stand</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,41 +22,85 @@
 
     <main id="home" class="hero">
 
-        <div class="hero-content">
-            <p class="warning">⚠ SURVIVAL PROTOCOL ACTIVATED</p>
+    <!-- Background effects -->
+    <div class="grid-bg"></div>
+    <div class="red-glow"></div>
 
-            <h1>ZOMBIE<br><span>LAST STAND</span></h1>
+    <div class="hero-content">
 
-            <p class="description">
-                The city has fallen. The infected are everywhere.
-                Your mission is simple — survive.
-            </p>
+        <p class="warning">⚠ SURVIVAL PROTOCOL ACTIVATED</p>
 
-            <div class="buttons">
-                <button class="start-btn">START GAME</button>
-                <button class="how-btn">HOW TO PLAY</button>
-            </div>
+        <h1>
+            ZOMBIE<br>
+            <span>LAST STAND</span>
+        </h1>
+
+        <p class="description">
+            The city has fallen. The infected are everywhere.
+            Your mission is simple — survive.
+        </p>
+
+        <div class="buttons">
+            <button class="start-btn">
+                ▶ START GAME
+            </button>
+
+            <button class="how-btn">
+                HOW TO PLAY
+            </button>
         </div>
 
-        <div class="game-status">
-            <div>
-                <span>WAVE</span>
-                <strong>01</strong>
-            </div>
+    </div>
 
-            <div>
-                <span>SCORE</span>
-                <strong>0000</strong>
-            </div>
 
-            <div>
-                <span>HEALTH</span>
-                <strong>100%</strong>
-            </div>
+    <!-- GAME VISUAL -->
+
+    <div class="game-visual">
+
+        <div class="target-ring ring-1"></div>
+        <div class="target-ring ring-2"></div>
+        <div class="target-ring ring-3"></div>
+
+        <div class="target-dot"></div>
+
+        <div class="target-line line-top"></div>
+        <div class="target-line line-bottom"></div>
+        <div class="target-line line-left"></div>
+        <div class="target-line line-right"></div>
+
+        <div class="target-text">
+            TARGET<br>
+            <span>DETECTED</span>
         </div>
 
-    </main>
+    </div>
 
+
+    <!-- STATUS -->
+
+    <div class="game-status">
+
+        <div class="status-box">
+            <span>WAVE</span>
+            <strong>01</strong>
+            <small>ACTIVE</small>
+        </div>
+
+        <div class="status-box">
+            <span>SCORE</span>
+            <strong>0000</strong>
+            <small>POINTS</small>
+        </div>
+
+        <div class="status-box">
+            <span>HEALTH</span>
+            <strong>100%</strong>
+            <small>STABLE</small>
+        </div>
+
+    </div>
+
+</main>
     <section id="how-to-play" class="info-section">
         <h2>HOW TO PLAY</h2>
 
