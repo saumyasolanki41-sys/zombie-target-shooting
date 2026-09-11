@@ -25,14 +25,54 @@
   <div id="minimapWrap"><canvas id="minimap" width="130" height="130"></canvas></div>
   <div id="waveBanner"></div>
   <div id="overlay" style="display:flex;">
-    <div id="startScreen">
-      <h1>ZOMBIE ATTACK</h1>
-      <p>WASD or Arrow Keys to move</p>
-      <p>Mouse to aim, Click (or Space) to shoot</p>
-      <p>R to reload · 1/2/3 to switch weapons you've picked up</p>
-      <p>Grab crates on the ground: weapons and power-ups</p>
-      <button id="startBtn">START GAME</button>
-    </div>
+    <div id="startScreen"> 
+  <h1>ZOMBIE ATTACK</h1>
+  <div class="statusLine">⚠ SURVIVAL PROTOCOL ACTIVATED</div>
+
+  <div id="howToPlay">
+  <h2>HOW TO PLAY</h2>
+
+  <p>
+    <span class="key">W A S D </span>
+    <span class="instruction">Move</span>
+  </p>
+
+  <p>
+    <span class="key">↑ ↓ ← → </span>
+    <span class="instruction">Move</span>
+  </p>
+
+  <p>
+    <span class="key">MOUSE</span>
+    <span class="instruction">Aim</span>
+  </p>
+
+  <p>
+    <span class="key">CLICK</span>
+    <span class="instruction">Shoot</span>
+  </p>
+
+  <p>
+    <span class="key">SPACE</span>
+    <span class="instruction">Shoot</span>
+  </p>
+
+  <p>
+    <span class="key">R</span>
+    <span class="instruction">Reload</span>
+  </p>
+
+  <p>
+    <span class="key">1 / 2 / 3 </span>
+    <span class="instruction">Switch weapons</span>
+  </p>
+
+  <p>
+    <span class="key">CRATES</span>
+    <span class="instruction">Collect weapons & power-ups</span>
+  </p>
+</div>
+<button id="startBtn">START GAME</button>
   </div>
 </div>
 
