@@ -1,0 +1,112 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Courier New', monospace;
+}
+#gameContainer {
+  position: relative;
+  box-shadow: 0 0 60px rgba(120, 200, 80, 0.15);
+  border: 2px solid #2a3a2a;
+}
+canvas#game {
+  display: block;
+  background: #1a1e16;
+  cursor: crosshair;
+}
+#hud {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  color: #d8e8d0;
+  pointer-events: none;
+  text-shadow: 2px 2px 3px #000;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+#hud .stat { margin-bottom: 6px; }
+#healthBarBg {
+  width: 180px;
+  height: 16px;
+  background: #331111;
+  border: 2px solid #000;
+  margin-top: 4px;
+}
+#healthBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, #7fbf3f, #b8e05a);
+  width: 100%;
+  transition: width 0.15s ease;
+}
+#ammoBar { font-size: 14px; color: #e0d090; margin-top: 4px; }
+#weaponRow { font-size: 13px; color: #9fc0e0; margin-top: 6px; }
+#weaponRow span.wpn {
+  display: inline-block;
+  padding: 2px 6px;
+  margin-right: 4px;
+  border: 1px solid #445;
+  opacity: 0.4;
+}
+#weaponRow span.wpn.active { opacity: 1; border-color: #9fc0e0; background: rgba(120,160,220,0.15); }
+#buffRow { font-size: 12px; margin-top: 6px; color: #e0a0e0; min-height: 14px; }
+#minimapWrap {
+  position: absolute;
+  top: 14px; right: 14px;
+  width: 130px; height: 130px;
+  border: 2px solid #3a4a3a;
+  background: rgba(10,15,10,0.55);
+  pointer-events: none;
+}
+#overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #d8e8d0;
+  text-align: center;
+}
+#overlay h1 {
+  font-size: 48px;
+  color: #c94b4b;
+  text-shadow: 0 0 20px rgba(200,50,50,0.6);
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+#overlay p { font-size: 16px; margin: 5px 0; color: #b8c8b0; }
+#overlay button {
+  margin-top: 22px;
+  padding: 12px 28px;
+  font-size: 16px;
+  background: #3f6f2f;
+  color: #eaffea;
+  border: 2px solid #7fbf3f;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-family: inherit;
+}
+#overlay button:hover { background: #4f8f3a; }
+#startScreen h1 { font-size: 40px; color: #7fbf3f; letter-spacing: 6px; margin-bottom: 18px; text-shadow: 0 0 20px rgba(120,200,80,0.5); }
+#startScreen p { font-size: 13px; color: #99a898; margin: 3px 0; }
+#waveBanner {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #e0d090;
+  font-size: 34px;
+  letter-spacing: 6px;
+  text-shadow: 0 0 15px rgba(0,0,0,0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
