@@ -449,309 +449,765 @@ button:focus-visible {
 }
 
 #waveBanner {
-    position: absolute;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font: bold 30px var(--mono);
-    letter-spacing: 4px;
-    color: var(--lime);
-    background: #09100dde;
-    padding: 18px 25px;
-    border-left: 3px solid var(--lime);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s;
-    white-space: nowrap;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #e0d090;
+  font-size: 34px;
+  letter-spacing: 6px;
+  text-shadow: 0 0 15px rgba(0,0,0,0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+/* =========================
+   HOW TO PLAY
+   ========================= */
+
+#howToPlay {
+  margin-top: 22px;
+  width: 430px;
+  max-width: 90%;
+  padding: 18px 22px;
+
+  background: rgba(20, 28, 20, 0.92);
+  border: 1px solid #3f5f3f;
+  box-shadow:
+    0 0 20px rgba(120, 200, 80, 0.08),
+    inset 0 0 20px rgba(0, 0, 0, 0.35);
+
+  text-align: left;
 }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #778c7b;
-    letter-spacing: 0.4px;
-    font-size: 10px;
-    margin-top: 16px;
+#howToPlay h2 {
+  color: #b8e05a;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(120, 200, 80, 0.35);
 }
 
-.footer-sep {
-    margin: 0 12px;
-    color: #405342;
+.control-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 9px 0;
+
+  color: #c8d5c3;
+  font-size: 13px;
+  line-height: 1.4;
 }
 
-#levelSelectScreen,
-#pauseOverlay {
-    background: #070d0deb !important;
-    backdrop-filter: blur(8px);
-    overflow: auto;
-    padding: 24px;
+.control-key {
+  min-width: 82px;
+  padding: 5px 7px;
+
+  background: #171d17;
+  border: 1px solid #526b52;
+
+  color: #e0d090;
+  text-align: center;
+
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  box-shadow: 0 2px 0 #080b08;
 }
 
-#levelSelectScreen > div,
-#pauseOverlay > div {
-    background: #111c15 !important;
-    border: 1px solid #435639 !important;
-    border-radius: 6px !important;
-    box-shadow: 0 25px 90px #0008;
-    padding: 30px !important;
-    max-height: 95vh;
-    overflow: auto;
+.control-text {
+  flex: 1;
 }
 
-#levelSelectScreen h1,
-#pauseOverlay h1 {
-    font: 900 28px Arial !important;
-    color: #eaf1df !important;
-    letter-spacing: -1px;
-    margin-bottom: 24px !important;
+.control-item:hover .control-key {
+  border-color: #7fbf3f;
+  color: #b8e05a;
 }
 
-#levelButtons {
-    gap: 10px !important;
+.control-item:hover {
+  color: #e8f0e5;
 }
 
-#levelButtons button {
-    background: #1d2b20 !important;
-    color: #d9e8cc !important;
-    border-color: #3c5134 !important;
-    text-align: left;
+.pickup-info {
+  margin-top: 14px;
+  padding-top: 12px;
+
+  border-top: 1px solid #334333;
+
+  color: #99a898;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+/* =========================
+   UPGRADED START SCREEN
+   ========================= */
+
+#startScreen {
+  width: 520px;
+  max-width: 92%;
+  max-height: 92vh;
+  padding: 30px 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18, 25, 18, 0.98),
+      rgba(7, 11, 7, 0.98)
+    );
+
+  border: 1px solid #4d654d;
+
+  box-shadow:
+    0 0 35px rgba(120, 200, 80, 0.12),
+    inset 0 0 30px rgba(0, 0, 0, 0.65);
+
+  text-align: center;
+
+  position: relative;
+  overflow-y: auto;
 }
 
-#levelButtons button:hover {
-    background: var(--lime) !important;
-    color: #14200e !important;
+/* Small tactical corner effect */
+#startScreen::before,
+ {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  pointer-events: none;
 }
 
-#levelBack,
-#quitBtn {
-    background: transparent !important;
-    color: #a0b394 !important;
-    border-color: #3c5134 !important;
+#startScreen::before {
+  top: 8px;
+  left: 8px;
+  border-top: 2px solid #7fbf3f;
+  border-left: 2px solid #7fbf3f;
 }
 
-#fullscreenBtn {
-    position: absolute;
-    right: 22px;
-    bottom: 125px;
-    z-index: 5;
-    background: #111d16db;
-    color: #d7e8cd;
-    border: 1px solid #667853;
-    padding: 10px;
-    font: 10px var(--mono);
+#startScreen::after {
+  bottom: 8px;
+  right: 8px;
+  border-bottom: 2px solid #7fbf3f;
+  border-right: 2px solid #7fbf3f;
 }
 
-#levelButtons button:disabled {
-    opacity: 0.35;
-    cursor: not-allowed;
-    filter: none;
-    transform: none;
-    background: #18201b !important;
-    color: #8b978e !important;
+/* Game title */
+#startScreen h1 {
+  font-size: 42px;
+  letter-spacing: 7px;
+  color: #b8e05a;
+
+  margin-bottom: 22px;
+
+  text-shadow:
+    0 0 8px rgba(127, 191, 63, 0.5),
+    0 0 25px rgba(127, 191, 63, 0.2);
 }
 
-#levelCompleteScreen {
-    position: fixed;
-    inset: 0;
-    z-index: 10001;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #07100de8;
-    color: #eaf1df;
-    text-align: center;
-    backdrop-filter: blur(6px);
+/* =========================
+   HOW TO PLAY
+   ========================= */
+
+#howToPlay {
+  width: 100%;
+  margin: 0 auto 24px;
+  padding: 18px 20px;
+
+  background: rgba(10, 15, 10, 0.9);
+
+  border: 1px solid #3f533f;
+
+  box-shadow:
+    inset 0 0 20px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(120, 200, 80, 0.05);
+
+  text-align: left;
 }
 
-#levelCompleteScreen > div {
-    padding: 35px;
-    background: #142119;
-    border: 1px solid #607c49;
-    border-radius: 6px;
-    max-width: 92%;
+#howToPlay h2 {
+  margin-bottom: 14px;
+
+  color: #b8e05a;
+  font-size: 17px;
+  letter-spacing: 4px;
+
+  text-align: center;
+
+  text-shadow: 0 0 10px rgba(127, 191, 63, 0.35);
 }
 
-#levelCompleteScreen h1 {
-    font: 900 32px Arial;
-    margin: 15px 0;
+#howToPlay p {
+  display: flex;
+  align-items: center;
+
+  margin: 7px 0;
+  padding: 7px 8px;
+
+  color: #aebaaa;
+  font-size: 12px;
+
+  border-bottom: 1px solid rgba(82, 107, 82, 0.2);
+
+  transition: 0.2s ease;
 }
 
-#levelCompleteScreen p {
-    margin: 10px 0;
-    color: #b3c4ae;
+#howToPlay p:last-child {
+  border-bottom: none;
 }
 
-#levelCompleteScreen button {
-    display: block;
-    width: 100%;
-    margin-top: 15px;
-    padding: 14px;
-    background: var(--lime);
-    border: 1px solid var(--lime);
-    font: bold 12px var(--mono);
-    color: #17210f;
+#howToPlay span {
+  color: #e0d090;
+  font-weight: bold;
 }
 
-@media (max-width: 700px) {
-
-    body {
-        padding: 12px;
-    }
-
-    .system {
-        display: none;
-    }
-
-    .masthead {
-        margin-bottom: 18px;
-    }
-
-    .mission-line > span:last-child {
-        display: none;
-    }
-
-    #hud {
-        padding: 10px;
-    }
-
-    .hud-top {
-        padding-right: 98px;
-        gap: 5px;
-    }
-
-    .metric {
-        min-width: 52px;
-        padding: 6px 8px;
-    }
-
-    .metric small {
-        font-size: 7px;
-        letter-spacing: 0;
-    }
-
-    .metric strong {
-        font-size: 19px;
-    }
-
-    #minimapWrap {
-        right: 10px;
-        top: 10px;
-        width: 86px;
-    }
-
-    #minimap {
-        width: 84px;
-        height: 84px;
-    }
-
-    .radar-label {
-        font-size: 6px;
-        padding: 5px;
-        letter-spacing: 0;
-    }
-
-    .hud-bottom {
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
-        gap: 8px;
-    }
-
-    .vitals,
-    .loadout {
-        padding: 8px;
-        min-width: 0;
-        width: 45%;
-    }
-
-    .vitals small,
-    #ammoBar small {
-        font-size: 7px;
-    }
-
-    #ammoVal {
-        font-size: 20px;
-    }
-
-    .wpn {
-        padding: 3px;
-        font-size: 8px;
-        margin-left: 2px;
-    }
-
-    #startScreen {
-        padding: 12px;
-    }
-
-    .eyebrow {
-        margin-bottom: 12px;
-        font-size: 7px;
-    }
-
-    #overlay h1 {
-        margin-bottom: 12px;
-    }
-
-    #overlay p {
-        font-size: 11px;
-    }
-
-    #startBtn {
-        margin-top: 14px;
-        width: 240px;
-    }
-
-    .briefing {
-        margin-top: 15px;
-        padding-top: 12px;
-        gap: 12px;
-    }
-
-    .start-meta {
-        font-size: 7px;
-    }
-
-    .briefing kbd {
-        font-size: 8px;
-    }
-
-    footer {
-        font-size: 8px;
-    }
-
-    footer > span:last-child {
-        display: none;
-    }
+#howToPlay p:hover {
+  background: rgba(127, 191, 63, 0.06);
+  padding-left: 12px;
 }
 
-@media (max-height: 570px) {
-
-    #startScreen {
-        padding: 10px;
-    }
-
-    #startScreen h1 {
-        font-size: 44px;
-    }
-
-    .eyebrow {
-        margin-bottom: 10px;
-    }
-
-    .briefing {
-        margin-top: 12px;
-        padding-top: 10px;
-    }
-
-    #startBtn {
-        margin-top: 12px;
-    }
+#howToPlay p:hover span {
+  color: #b8e05a;
 }
 
-@media (prefers-reduced-motion: reduce) {
+/* =========================
+   START BUTTON
+   ========================= */
 
-    * {
-        transition: none !important;
-    }
+#startBtn {
+  padding: 13px 38px;
+
+  background: #3f6f2f;
+  color: #eaffea;
+
+  border: 2px solid #7fbf3f;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 3px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 12px rgba(127, 191, 63, 0.18);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#startBtn:hover {
+  background: #4f8f3a;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 20px rgba(127, 191, 63, 0.35);
+}
+
+#startBtn:active {
+  transform: translateY(0);
+}
+/* =========================
+   TACTICAL CONTROL KEYS
+   ========================= */
+
+#howToPlay p {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  min-height: 34px;
+}
+
+#howToPlay .key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 78px;
+  height: 27px;
+  padding: 0 8px;
+
+  background: #151b15;
+  border: 1px solid #596d59;
+  border-bottom: 3px solid #354535;
+
+  color: #d8e8d0;
+
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.5),
+    inset 0 0 8px rgba(120, 200, 80, 0.04);
+
+  transition: 0.2s ease;
+}
+
+#howToPlay .instruction {
+  color: #aebaaa;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* Key hover */
+#howToPlay p:hover .key {
+  border-color: #7fbf3f;
+  border-bottom-color: #527d2d;
+
+  color: #b8e05a;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 0 10px rgba(127, 191, 63, 0.15);
+}
+
+#howToPlay p:hover .instruction {
+  color: #e8f0e5;
+}
+/* =========================
+   SURVIVAL STATUS
+   ========================= */
+
+.statusLine {
+  display: inline-block;
+
+  margin-top: -10px;
+  margin-bottom: 20px;
+  padding: 5px 12px;
+
+  border: 1px solid #5b4d32;
+  background: rgba(80, 65, 30, 0.15);
+
+  color: #e0d090;
+
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  text-shadow: 0 0 8px rgba(224, 208, 144, 0.3);
+
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+  0%, 100% {
+    opacity: 0.65;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+/* =========================
+   TACTICAL START SCREEN EFFECT
+   ========================= */
+
+#startScreen {
+  background:
+    linear-gradient(rgba(15, 22, 15, 0.96), rgba(5, 9, 5, 0.98)),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 24px,
+      rgba(127, 191, 63, 0.025) 25px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 24px,
+      rgba(127, 191, 63, 0.025) 25px
+    );
+}
+
+/* Subtle moving scan line */
+#startScreen::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: -20%;
+
+  height: 2px;
+
+  background: rgba(127, 191, 63, 0.18);
+
+  box-shadow: 0 0 12px rgba(127, 191, 63, 0.15);
+
+  animation: scanLine 4s linear infinite;
+
+  pointer-events: none;
+}
+
+@keyframes scanLine {
+  0% {
+    top: -10%;
+  }
+
+  100% {
+    top: 110%;
+  }
+}
+/* =========================================
+   UPGRADED GAME HUD
+   ========================================= */
+
+#hud {
+  padding: 16px 20px;
+
+  color: #d8e8d0;
+
+  font-size: 14px;
+  letter-spacing: 1.5px;
+
+  text-shadow:
+    2px 2px 4px #000,
+    0 0 8px rgba(120, 200, 80, 0.15);
+}
+
+
+/* LEFT HUD PANEL */
+
+#hud > div:first-child {
+  padding: 10px 14px;
+
+  background: rgba(5, 10, 5, 0.55);
+
+  border-left: 2px solid #6f963f;
+  border-bottom: 1px solid rgba(127, 191, 63, 0.25);
+
+  box-shadow:
+    0 0 15px rgba(0, 0, 0, 0.35),
+    inset 0 0 12px rgba(127, 191, 63, 0.03);
+}
+
+
+/* SCORE / WAVE */
+
+#hud .stat {
+  margin-bottom: 7px;
+
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+
+/* NUMBERS */
+
+#hud .stat span {
+  color: #b8e05a;
+
+  text-shadow:
+    0 0 8px rgba(127, 191, 63, 0.35);
+}
+
+
+/* HEALTH BAR */
+
+#healthBarBg {
+
+  width: 190px;
+  height: 18px;
+
+  margin-top: 7px;
+
+  background: #160909;
+
+  border: 1px solid #594141;
+
+  box-shadow:
+    inset 0 0 7px rgba(0, 0, 0, 0.8);
+}
+
+
+#healthBarFill {
+
+  background:
+    linear-gradient(
+      90deg,
+      #5f982e,
+      #9fd34c
+    );
+
+  box-shadow:
+    0 0 8px rgba(127, 191, 63, 0.35);
+
+  transition: width 0.15s ease;
+}
+
+
+/* AMMO */
+
+#ammoBar {
+
+  margin-top: 8px;
+
+  color: #d8c982;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+}
+
+
+#ammoBar span {
+
+  color: #f0df92;
+
+  text-shadow:
+    0 0 8px rgba(224, 208, 144, 0.3);
+}
+
+
+/* WEAPON ROW */
+
+#weaponRow {
+
+  margin-top: 9px;
+
+  color: #a9c3d8;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+}
+
+
+#weaponRow span.wpn {
+
+  padding: 4px 8px;
+
+  margin-right: 5px;
+
+  border: 1px solid #45515c;
+
+  background: rgba(20, 25, 30, 0.6);
+
+  opacity: 0.45;
+
+  transition: all 0.2s ease;
+}
+
+
+#weaponRow span.wpn.active {
+
+  opacity: 1;
+
+  border-color: #9fc0e0;
+
+  background: rgba(120, 160, 220, 0.15);
+
+  box-shadow:
+    0 0 8px rgba(120, 160, 220, 0.2);
+}
+
+
+/* BUFF */
+
+#buffRow {
+
+  margin-top: 8px;
+
+  color: #d8a8d8;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+}
+
+
+/* RIGHT SIDE */
+
+#hud > div:last-child {
+
+  padding: 10px 14px;
+
+  background: rgba(5, 10, 5, 0.55);
+
+  border-right: 2px solid #6f963f;
+  border-bottom: 1px solid rgba(127, 191, 63, 0.25);
+
+  box-shadow:
+    0 0 15px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ZOMBIES LEFT */
+
+#zombieCount {
+
+  color: #d45a5a !important;
+
+  text-shadow:
+    0 0 8px rgba(200, 60, 60, 0.4);
+}
+/* Hide controls text during gameplay */
+#hud > div:last-child .stat:last-child {
+  display: none;
+}
+/* =========================================
+   UPGRADED WEAPON HUD
+   ========================================= */
+
+#weaponRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-top: 10px;
+
+  min-height: 32px;
+
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+
+/* EACH WEAPON */
+
+#weaponRow span.wpn {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 62px;
+  height: 30px;
+
+  margin-right: 0;
+  padding: 0 8px;
+
+  background: rgba(12, 17, 12, 0.9);
+
+  border: 1px solid #3b493b;
+  border-bottom: 3px solid #273127;
+
+  color: #718071;
+
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  opacity: 0.55;
+
+  box-shadow:
+    inset 0 0 8px rgba(0, 0, 0, 0.5),
+    0 2px 4px rgba(0, 0, 0, 0.35);
+
+  transition: all 0.2s ease;
+}
+
+
+/* NUMBER / WEAPON HOVER */
+
+#weaponRow span.wpn:hover {
+  opacity: 0.9;
+
+  color: #c8d8c0;
+
+  border-color: #637463;
+
+  transform: translateY(-1px);
+}
+
+
+/* ACTIVE WEAPON */
+
+#weaponRow span.wpn.active {
+
+  opacity: 1;
+
+  color: #dff3d5;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(72, 105, 48, 0.45),
+      rgba(25, 40, 22, 0.9)
+    );
+
+  border-color: #8fbd55;
+
+  border-bottom-color: #557c32;
+
+  box-shadow:
+    0 0 8px rgba(127, 191, 63, 0.25),
+    inset 0 0 10px rgba(127, 191, 63, 0.08);
+
+  text-shadow:
+    0 0 6px rgba(184, 224, 90, 0.35);
+}
+
+
+/* ACTIVE WEAPON TOP INDICATOR */
+
+#weaponRow span.wpn.active::before {
+  content: "";
+
+  position: absolute;
+
+  top: -4px;
+  left: 50%;
+
+  width: 18px;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  background: #b8e05a;
+
+  box-shadow:
+    0 0 7px rgba(184, 224, 90, 0.5);
+}
+
+
+/* EMPTY / LOCKED WEAPON */
+
+#weaponRow span.wpn:not(.active) {
+  filter: saturate(0.5);
+}
+
+
+/* SMALL LABEL ABOVE WEAPON ROW */
+
+#weaponRow::before {
+  content: "WEAPONS";
+
+  position: absolute;
+
+  transform: translateY(-21px);
+
+  color: #667566;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+/* LOCKED WEAPONS */
+#weaponRow span.wpn.locked {
+  color: #4f594f;
+  background: rgba(5, 8, 5, 0.75);
+  border-color: #252b25;
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+
+#weaponRow span.wpn.locked:hover {
+  transform: none;
+  opacity: 0.65;
+  color: #687268;
+  border-color: #394139;
 }

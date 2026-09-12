@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zombie Attack — Survival Protocol</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Zombie Attack — Top Down Survival</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body>
@@ -25,134 +25,60 @@
       <span>OPERATIONS / <b>THE QUARANTINE ZONE</b></span>
       <span>TOP DOWN SURVIVAL · SOLO</span>
     </div>
+  </div>
+  <div id="minimapWrap"><canvas id="minimap" width="130" height="130"></canvas></div>
+  <div id="waveBanner"></div>
+  <div id="overlay" style="display:flex;">
+    <div id="startScreen"> 
+  <h1>ZOMBIE ATTACK</h1>
+  <div class="statusLine">⚠ SURVIVAL PROTOCOL ACTIVATED</div>
 
-    <div id="gameContainer">
-      <button id="fullscreenBtn" type="button">
-        FULLSCREEN
-      </button>
+  <div id="howToPlay">
+  <h2>HOW TO PLAY</h2>
 
-      <canvas
-        id="game"
-        width="900"
-        height="600"
-        aria-label="Zombie survival game arena"
-      ></canvas>
+  <p>
+    <span class="key">W A S D </span>
+    <span class="instruction">Move</span>
+  </p>
 
-      <div id="hud">
-        <div class="hud-top">
-          <div class="metric">
-            <small>SCORE</small>
-            <strong id="scoreVal">0</strong>
-          </div>
+  <p>
+    <span class="key">↑ ↓ ← → </span>
+    <span class="instruction">Move</span>
+  </p>
 
-          <div class="metric">
-            <small>LEVEL / WAVE</small>
-            <strong id="waveVal">1</strong>
-          </div>
+  <p>
+    <span class="key">MOUSE</span>
+    <span class="instruction">Aim</span>
+  </p>
 
-          <div class="metric threat">
-            <small>HOSTILES REMAINING</small>
-            <strong id="zombieCount">0</strong>
-          </div>
-        </div>
+  <p>
+    <span class="key">CLICK</span>
+    <span class="instruction">Shoot</span>
+  </p>
 
-        <div class="hud-bottom">
-          <div class="vitals">
-            <small>+ &nbsp; VITAL STATUS</small>
+  <p>
+    <span class="key">SPACE</span>
+    <span class="instruction">Shoot</span>
+  </p>
 
-            <div id="healthBarBg">
-              <div id="healthBarFill"></div>
-            </div>
+  <p>
+    <span class="key">R</span>
+    <span class="instruction">Reload</span>
+  </p>
 
-            <div id="buffRow"></div>
-          </div>
+  <p>
+    <span class="key">1 / 2 / 3 </span>
+    <span class="instruction">Switch weapons</span>
+  </p>
 
-          <div class="loadout">
-            <div id="ammoBar">
-              <small>AMMUNITION</small>
-              <span id="ammoVal">12</span>
-
-              <span class="ammo-divider">
-                / <span id="ammoMaxVal">12</span>
-              </span>
-
-              <kbd>R</kbd>
-            </div>
-
-            <div id="weaponRow"></div>
-          </div>
-        </div>
-      </div>
-
-      <div id="minimapWrap">
-        <div class="radar-label">
-          <i></i> FIELD RADAR
-        </div>
-
-        <canvas
-          id="minimap"
-          width="130"
-          height="130"
-        ></canvas>
-      </div>
-
-      <div id="waveBanner"></div>
-
-      <div id="overlay" style="display: flex;">
-        <div id="startScreen">
-          <div class="eyebrow">
-            <span></span>
-            EMERGENCY BROADCAST / 001
-          </div>
-
-          <div class="sector-tag">QUARANTINE ZONE</div>
-
-          <h1>
-            ZOMBIE<br>
-            <span>ATTACK</span>
-          </h1>
-
-          <p class="intro">
-            The city is gone. The fight isn’t.<br>
-            Gear up, hold your ground, and survive the next wave.
-          </p>
-
-          <button id="startBtn" type="button">
-            ENTER THE ZONE <span>↗</span>
-          </button>
-
-          <div class="start-meta">
-            10 LEVELS
-            <span>·</span>
-            CLEAR 3 WAVES TO UNLOCK
-            <span>·</span>
-            NO BACKUP
-          </div>
-
-          <div class="briefing">
-            <div>
-              <kbd>W A S D</kbd>
-              <small>MOVE</small>
-            </div>
-
-            <div>
-              <kbd>MOUSE</kbd>
-              <small>AIM &amp; FIRE</small>
-            </div>
-
-            <div>
-              <kbd>1 / 2 / 3</kbd>
-              <small>WEAPONS</small>
-            </div>
-
-            <div>
-              <kbd>R</kbd>
-              <small>RELOAD</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <p>
+    <span class="key">CRATES</span>
+    <span class="instruction">Collect weapons & power-ups</span>
+  </p>
+</div>
+<button id="startBtn">START GAME</button>
+  </div>
+</div>
 
     <footer>
       <span>
@@ -170,4 +96,3 @@
 
   <script src="script.js"></script>
 </body>
-</html>
