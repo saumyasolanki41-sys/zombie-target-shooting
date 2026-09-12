@@ -6,7 +6,7 @@ A browser-based top-down zombie survival shooting game developed using HTML, CSS
 
 ## 🚀 Play the Game
 
-👉 **[Click here to play Zombie Attack](https://zombie-target-shooting-game.vercel.app/)**
+👉 **[Click here to play Zombie Attack](https://zombie-target-shooting-game-in.vercel.app/)**
 
 The game is deployed on Vercel and can be played directly in a web browser without any installation.
 
